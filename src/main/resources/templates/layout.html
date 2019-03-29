@@ -11,6 +11,11 @@
 
             gtag('config', 'UA-137244927-1');
         </script>
+        <script>
+            function clickSendEvent() {
+                gtag('event', 'view_item');
+            }
+        </script>
         <title th:text="${pageTitle}"></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     </head>
@@ -24,6 +29,9 @@
             </div>
         </div>
         <div th:text="${content}"></div>
+        <div>
+            <button onclick="clickSendEvent()">Send Event</button>
+        </div>
     </body>
 
 </html>
